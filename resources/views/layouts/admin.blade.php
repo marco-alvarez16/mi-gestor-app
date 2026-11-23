@@ -216,6 +216,25 @@
     </header>
 
 
+    <nav class="d-flex d-md-none gap-2 overflow-x-auto px-3 py-2 bg-white border-bottom">
+    <a href="{{ route('dashboard') }}" class="btn btn-sm {{ request()->routeIs('dashboard') ? 'btn-primary' : 'btn-outline-secondary' }} text-nowrap">
+        <i class="bi bi-house-door-fill"></i> Dashboard
+    </a>
+    <a href="{{ route('tasks.index') }}" class="btn btn-sm {{ request()->routeIs('tasks.index') ? 'btn-primary' : 'btn-outline-secondary' }} text-nowrap">
+        <i class="bi bi-list-task"></i> Mis tareas
+    </a>
+    <a href="{{ route('tasks.create') }}" class="btn btn-sm {{ request()->routeIs('tasks.create') ? 'btn-primary' : 'btn-outline-secondary' }} text-nowrap">
+        <i class="bi bi-plus-circle-fill"></i> Nueva tarea
+    </a>
+    <a href="{{ route('tasks.completed') }}" class="btn btn-sm {{ request()->routeIs('tasks.completed') ? 'btn-primary' : 'btn-outline-secondary' }} text-nowrap">
+        <i class="bi bi-check-circle-fill"></i> Completadas
+    </a>
+    <a href="{{ route('profile.edit') }}" class="btn btn-sm {{ request()->routeIs('profile.*') ? 'btn-primary' : 'btn-outline-secondary' }} text-nowrap">
+        <i class="bi bi-person-circle"></i> Mi perfil
+    </a>
+</nav>
+
+
     <main class="task-content">
 
         @yield('content')
