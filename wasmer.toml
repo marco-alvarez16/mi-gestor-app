@@ -1,0 +1,12 @@
+[dependencies]
+"phpix/phpix-83-32bit" = "=0.3.1"
+"wasmer/bash" = "=1.0.25"
+
+[[command]]
+name = "start"
+runner = "wasmer/bash"
+command = """
+php artisan migrate --force
+php artisan config:cache
+php -S 0.0.0.0:8080 -t public
+"""
