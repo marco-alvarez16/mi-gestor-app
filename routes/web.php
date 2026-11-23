@@ -6,8 +6,6 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\EnsureSingleSession;
 
-use Illuminate\Support\Facades\Artisan;
-
 
 Route::get('/', function () {
     return view('welcome');
@@ -181,9 +179,3 @@ require __DIR__.'/auth.php';
 
 
 
-
-Route::get('/run-migrate-once-9482', function () {
-    Artisan::call('migrate', ['--force' => true]);
-    Artisan::call('config:cache');
-    return 'Migraciones ejecutadas correctamente';
-});
