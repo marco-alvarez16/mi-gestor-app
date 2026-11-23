@@ -174,3 +174,14 @@ Route::middleware(['auth', 'verified', EnsureSingleSession::class])->group(funct
 
 
 require __DIR__.'/auth.php';
+
+
+
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/run-migrate-once-9482', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    Artisan::call('config:cache');
+    return 'Migraciones ejecutadas correctamente';
+});
