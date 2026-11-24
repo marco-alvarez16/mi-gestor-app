@@ -20,6 +20,8 @@ class Task extends Model
     ];
 
     protected $casts = [
+        'title' => 'encrypted',
+        'description' => 'encrypted',
         'due_date' => 'date',
     ];
 
