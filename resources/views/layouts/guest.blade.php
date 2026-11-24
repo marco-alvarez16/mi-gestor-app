@@ -13,6 +13,17 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <script>
+  !function(b,e,t,r){
+    b[t]=b[t]||function(...args){(b[t].q=b[t].q||[]).push(args)};
+    b[t].l=+new Date;
+    var s=e.createElement('script'); s.async=1; s.crossOrigin='anonymous';
+    s.src='https://betterstack.net/b.js?t='+r;
+    (e.head||e.getElementsByTagName('head')[0]).appendChild(s);
+  }(window,document,'betterstack','Frk2fT9Y1sZ54QvJ5eTyHBmb');
+  betterstack('init', { environment: 'production' });
+</script>
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
